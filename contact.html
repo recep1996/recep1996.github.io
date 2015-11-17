@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="Contactform/building-a-bootstrap-contact-form-using-php-and-ajax-master/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Contactform/building-a-bootstrap-contact-form-using-php-and-ajax-master/css/animate.css">
+    <link rel="stylesheet" href="style.css">
+    <script  type="text/javascript" src="Contactform/building-a-bootstrap-contact-form-using-php-and-ajax-master/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/validator.min.js"></script>
+<script type="text/javascript" src="js/form-scripts.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(window).load(function() {
+	$('#hamburgermenu').click(function() {
+	  // Prevent link from jumping to the top of the page
+	 
+	// alert('test');
+	  // If menu is already showing, slide it up. Otherwise, slide it down.
+	  $('#menubalk').toggleClass('slide-down');
+	});
+});
+</script>
+</head>
+
+<body>
+<header>
+	<div class="container">
+    	<div class="row">
+        	<div class="col-md-12">
+            	<div id="logotekst">Portfolio Recep</div>
+                        <div id="hamburgermenu">
+           			 <a href="#" class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>				
+                <div class="line"></div>
+             		 </a>
+           				 </div>
+                <nav id="menubalk">
+                	<ul class="clearfix menu">
+                    	<li><a href="home.html">HOME</a></li>
+                          <li><a href="portfolio.html">PORTFOLIO</a></li>
+ 						<li><a href="skills.html">SKILLS</a></li>
+                        <li><a href="overmij.html">OVER MIJ</a></li>
+                       <li><a href="contact.html">CONTACT</a></li>
+                       
+                       
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="row">
+<div class="col-sm-6 col-sm-offset-3">
+    <div class="well" style="margin-top: 10%;">
+    <h3>Contact</h3>
+    <form role="form" id="contactForm" data-toggle="validator" class="shake">
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label for="name" class="h4">Naam</label>
+                <input type="text" class="form-control" id="name" placeholder="Naam" required data-error="Vul dit veld in.">
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="email" class="h4">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="message" class="h4 ">Vragen</label>
+            <textarea id="message" class="form-control" rows="5" placeholder="Zet je vraag hier" required></textarea>
+            <div class="help-block with-errors"></div>
+        </div>
+        <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Verzend</button>
+        <div id="msgSubmit" class="h3 text-center hidden"></div>
+        <div class="clearfix"></div>
+    </form>
+    </div>
+</div>
+</div>
+
+</body>
+
+</html>
